@@ -1,0 +1,49 @@
+@use '../../../../styles/_base' as *
+@use '../../../../styles/_variables' as *
+@use '../../../../styles/_mixins' as *
+@use '../../../../styles/_functions' as *
+@import '../../../../styles.sass'
+
+nav
+    margin: 64px 0 0 0
+
+    .nav-container
+        @include flex($direction: row, $justify: space-between, $align: center)
+        max-width: 1300px
+        margin: 0 auto
+
+        .navigation
+            @include flex($direction: row, $justify: null, $align: center)
+            gap: 2rem
+
+            .links
+                @include flex($direction: row, $justify: null, $align: center)
+                gap: 1rem
+                
+                li
+                    list-style: none
+                    
+                    a
+                        text-decoration: none
+                        color: var(--text-color)
+
+                    .active-link
+                        color: $accent-red
+
+    .theme-switcher
+        width: 40px
+        height: 40px
+        background-color: var(--background-secondary)
+        border: none
+        border-radius: 50%
+        @include flex($direction: null, $justify: center, $align: center)
+        cursor: pointer
+        transition: 0.2s ease-in-out
+
+        &:hover
+            background-color: var(--background-secondary)
+            opacity: 0.8
+        
+    
+            
+    

@@ -1,5 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
 @use './styles/_base' as *
 @use './styles/_variables' as *
 @use './styles/_mixins' as *
 @use './styles/_functions' as *
+
+:root
+    @include light-theme
+
+    &[data-theme='dark']
+        @include dark-theme
+
+    @media (prefers-color-scheme: dark)
+        &:not([data-theme])
+            @include dark-theme
+            
+body
+    background-color: var(--background-color)
+    color: var(--text-color)
+    font-family: $font-stack
+    transition: 0.2s ease-in
+
+    

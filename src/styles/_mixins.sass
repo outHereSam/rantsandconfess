@@ -1,0 +1,19 @@
+@use './_variables' as *
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) 
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+
+@mixin light-theme
+    --background-color: #{$neutral-white}
+    --background-secondary: #{$light-secondary}
+    --text-color: #{$dark}
+    --accent-color: #{$accent-red}
+
+@mixin dark-theme
+    --background-color: #{$dark}
+    --background-secondary: #{$dark-secondary}
+    --text-color: #{$light-white}
+    --accent-color: #{$accent-red}
