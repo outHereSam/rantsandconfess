@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ThemeService } from './core/services/theme.service';
+import { EpisodesService } from './core/services/episodes.service';
 
 @Component({
   selector: 'app-root',

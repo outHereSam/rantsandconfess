@@ -5,7 +5,10 @@
 @import '../../../../styles.sass'
 
 nav
-    margin: 64px 0 0 0
+    width: 100%
+    padding: 24px 64px
+    background-color: var(--background-color)
+    transition: 0.2s ease-in
 
     .nav-container
         @include flex($direction: row, $justify: space-between, $align: center)
@@ -19,10 +22,10 @@ nav
             .links
                 @include flex($direction: row, $justify: null, $align: center)
                 gap: 1rem
-                
+
                 li
                     list-style: none
-                    
+
                     a
                         text-decoration: none
                         color: var(--text-color)
@@ -43,7 +46,3 @@ nav
         &:hover
             background-color: var(--background-secondary)
             opacity: 0.8
-        
-    
-            
-    

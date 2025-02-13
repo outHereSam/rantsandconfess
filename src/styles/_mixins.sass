@@ -1,10 +1,11 @@
 @use './_variables' as *
 
-@mixin flex($direction: row, $justify: flex-start, $align: stretch) 
+@mixin flex($direction: row, $justify: flex-start, $gap: 0, $align: stretch) 
     display: flex
     flex-direction: $direction
     justify-content: $justify
     align-items: $align
+    gap: $gap
 
 @mixin light-theme
     --background-color: #{$neutral-white}

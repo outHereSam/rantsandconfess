@@ -2,3 +2,65 @@
 @use '../../../styles/_variables' as *
 @use '../../../styles/_mixins' as *
 @use '../../../styles/_functions' as *
+
+.container
+    max-width: 1300px
+    margin: 0 auto
+
+header
+    // @include flex($direction: row, $justify: null, $align: center)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 17px
+    margin: 32px 0 0 0
+
+    .hero
+        background-color: var(--background-secondary)
+        transition: 0.2s ease-in
+        flex: 1
+        padding: 64px
+
+        h1
+            margin: 0 0 24px 0
+            font-weight: 700
+            line-height: 76.8px
+            font-size: 64px
+
+        p.kicker
+            font-size: 18px
+            line-height: 27px
+            font-weight: 400
+
+        .listen-links-light, .listen-links-dark
+            @include flex($direction: row, $justify: null, $align: center)
+            gap: 1rem
+            margin: 64px 0 0 0
+
+            .text p
+                font-size: 12px
+                margin: 0 0 4px 0
+
+        .listen-links-light
+            a
+                @include flex($direction: row, $justify: center, $align: center)
+                padding: 10px 54px
+                border-radius: 30px
+                gap: 5px
+                background-color: #2B2D42
+                text-decoration: none
+                color: #E1DDDC
+
+        .listen-links-dark
+            a
+                @include flex($direction: row, $justify: center, $align: center)
+                padding: 10px 54px
+                border-radius: 30px
+                gap: 5px
+                background-color: #E1DDDC
+                text-decoration: none
+                color: #2B2D42
+
+    .latest-podcast
+        border-top-left-radius: 24px
+        border-bottom-left-radius: 24px
+

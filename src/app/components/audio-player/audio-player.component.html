@@ -1,0 +1,36 @@
+<div class="audioPlayer">
+  <audio #audioPlayer [src]="episode?.audio_url" preload="metadata"></audio>
+  <div class="playControls">
+    <button class="forwardBackward" (click)="skipBackward(30)">
+      <i class="pi pi-angle-double-left"></i> 30
+    </button>
+    <button (click)="togglePlayPause()" class="playPause">
+      @if (isPlaying) {
+      <i class="pi pi-pause"></i>
+      } @else {
+      <i class="pi pi-play"></i>
+      }
+    </button>
+    <button class="forwardBackward" (click)="skipForward(30)">
+      30 <i class="pi pi-angle-double-right"></i>
+    </button>
+  </div>
+
+  <div class="time">
+    <!-- current time -->
+    <div class="currentTime">{{ formatTime(currentTime) }}</div>
+
+    <!-- progress bar -->
+
+    <input
+      type="range"
+      class="progressBar"
+      [value]="currentTime"
+      [max]="duration"
+      (input)="onProgressChange($event)"
+    />
+
+    <!-- duration -->
+    <div class="duration">{{ episode?.duration }}</div>
+  </div>
+</div>
