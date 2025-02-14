@@ -64,3 +64,86 @@ header
         border-top-left-radius: 24px
         border-bottom-left-radius: 24px
 
+.recentEpisodes
+    margin: 60px 0 
+
+    .head
+        @include flex($direction: row, $justify: space-between, $gap: null, $align: center)
+        
+        .more
+            @include flex($direction: row, $justify: null, $gap: 8px, $align: center)
+            text-decoration: none
+            color: var(--text-color)
+            transition: 0.2s ease-in
+
+
+            &:hover
+                color: $accent-red
+
+            &:hover > i
+                transform: translateX(8px)
+
+            i
+                transition: 0.2s ease-in
+
+
+.episodes, .team
+    margin: 24px 0 0 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr
+    grid-column-gap: 16px
+    grid-row-gap: 0px
+
+.sectionTitle
+    font-size: 24px
+    text-transform: uppercase
+
+         
+.meetTeam
+    margin: 0 0 60px 0
+
+    .teamCard
+        @include flex($direction: column, $justify: null, $gap: null, $align: null)
+        border-radius: 16px
+        background-color: var(--background-secondary)
+
+        img
+            width: 100%
+            height: 284px
+            object-fit: cover
+            border-top-left-radius: 16px
+            border-top-right-radius: 16px
+
+        .info
+            padding: 24px
+
+            .name
+                font-size: 20px
+                margin: 0 0 16px 0
+
+            .description
+                font-size: 14px
+                line-height: 24px
+                margin: 0 0 16px 0
+
+            .socials
+                ul
+                    @include flex($direction: row, $justify: null, $gap: 16px, $align: center)
+
+                    li
+                        list-style-type: none
+
+                        a
+                            color: var(--text-color)
+
+                            &:hover
+                                color: $accent-red
+                                
+                    
+
+
+       
+
+
+        

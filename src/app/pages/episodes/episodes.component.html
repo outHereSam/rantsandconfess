@@ -1,0 +1,14 @@
+<app-navbar />
+<div class="container">
+  <h1 class="sectionTitle">All Episodes</h1>
+
+  @if(episodes && episodes.length > 0) {
+  <div class="episodeList">
+    @for (episode of episodes; track episode.id) {
+    <app-episode-card [episode]="episode" />
+    }
+  </div>
+  }
+</div>
+
+<app-footer />

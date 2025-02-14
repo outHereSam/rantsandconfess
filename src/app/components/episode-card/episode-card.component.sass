@@ -1,0 +1,52 @@
+@use '../../../styles/_variables' as *
+@use '../../../styles/_functions' as *
+@use '../../../styles/_mixins' as *
+
+.episodeCard
+
+
+    img
+        width: 100%
+        height: 427px
+        object-fit: cover
+        border-radius: 8px
+
+    .info
+        padding: 16px 0 0 0
+
+        .episodeNumber
+            font-family: monospace
+            margin: 0 0 12px 0
+
+            .number
+                color: $accent-red
+
+        .episodeTitle
+            font-size: 32px
+            margin-bottom: 12px
+
+        .pubDate
+            font-family: monospace
+            font-style: italic
+            margin-bottom: 12px
+            
+        .description
+            font-size: 16px
+            line-height: 28px
+            margin: 0 0 12px 0
+
+        .more
+            text-transform: uppercase
+            color: $accent-red
+            @include flex($direction: row, $justify: null, $gap: 8px, $align: center)
+            cursor: pointer
+
+            &:hover > i
+                transform: translateX(8px)
+            
+            i
+                transition: 0.2s ease-in
+
+          
+            
+

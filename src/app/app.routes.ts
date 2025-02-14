@@ -15,4 +15,11 @@ export const routes: Routes = [
         (c) => c.LoginComponent
       ),
   },
+  {
+    path: 'episodes',
+    loadComponent: () =>
+      import('./pages/episodes/episodes.component').then(
+        (c) => c.EpisodesComponent
+      ),
+  },
 ];

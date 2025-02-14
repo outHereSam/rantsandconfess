@@ -17,7 +17,7 @@ export class EpisodesService {
 
   constructor(private http: HttpClient) {}
 
-  getEpisodes(): Observable<any[]> {
+  getEpisodes(): Observable<Episode[]> {
     return this.http.get(this.rssUrl, { responseType: 'text' }).pipe(
       map((xmlString: string) => {
         // Parse the XML
@@ -29,6 +29,14 @@ export class EpisodesService {
 
         // Convert each <item> into the desired JSON structure
         return items.map((item, index) => this.mapItemToJson(item, index + 1));
+      })
+    );
+  }
+
+  getRecentEpisodes(n: number): Observable<Episode[]> {
+    return this.getEpisodes().pipe(
+      map((episodes) => {
+        return episodes.slice(0, n);
       })
     );
   }

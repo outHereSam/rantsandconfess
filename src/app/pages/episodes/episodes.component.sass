@@ -1,0 +1,16 @@
+@use '../../../styles/_base' as *
+@use '../../../styles/_variables' as *
+@use '../../../styles/_mixins' as *
+@use '../../../styles/_functions' as *
+
+.container
+    max-width: 1300px
+    margin: 0 auto
+
+    .episodeList
+        margin: 24px 0 0 0
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr
+        grid-column-gap: 16px
+        grid-row-gap: 16px

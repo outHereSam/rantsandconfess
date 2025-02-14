@@ -1,0 +1,18 @@
+@use '../../../../styles/_base' as *
+@use '../../../../styles/_variables' as *
+@use '../../../../styles/_mixins' as *
+@use '../../../../styles/_functions' as *
+
+footer
+    .container
+        padding: 24px 0
+        text-align: center
+        font-size: 14px
+
+        .contact
+            margin: 24px 0
+            @include flex($direction: column, $justify: center, $gap: 8px, $align: null)
+            
+
+            li
+                list-style-type: none

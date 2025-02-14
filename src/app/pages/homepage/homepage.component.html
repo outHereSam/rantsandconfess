@@ -59,9 +59,134 @@
       }
     </div>
     <div class="latest-podcast">
-      @if (episodes && episodes.length > 0) {
-      <app-latest-episode [latestEpisode]="episodes[0]" />
+      @if (recentEpisodes && recentEpisodes.length > 0) {
+      <app-latest-episode [latestEpisode]="recentEpisodes[0]" />
       }
     </div>
   </header>
+
+  <section class="recentEpisodes">
+    <div class="head">
+      <h1 class="sectionTitle">Recent Episodes</h1>
+
+      <a routerLink="/episodes" class="more"
+        >View more <i class="pi pi-arrow-right"></i
+      ></a>
+    </div>
+
+    <div class="episodes">
+      @for (episode of recentEpisodes; track episode.title) {
+      <app-episode-card [episode]="episode" />
+      }
+    </div>
+  </section>
+
+  <section class="meetTeam">
+    <h1 class="sectionTitle">Meet the team</h1>
+
+    <div class="team">
+      <div class="teamCard">
+        <img src="../../../assets/images/lash.jpeg" alt="Team Member" />
+
+        <div class="info">
+          <h3 class="name">Lash</h3>
+
+          <p class="description">
+            Hi, I’m Lash, the voice behind the mic! Hailing from the vibrant
+            city of Takoradi. I’m a software engineer by day and a creative
+            enthusiast by night. When I’m not coding, you’ll find me sketching
+            out my ideas or capturing moments through my lens as a passionate
+            photographer. I love exploring the intersection of technology, art,
+            and storytelling, and I’m thrilled to bring those passions to life
+            on this podcast. Join me as we dive into fascinating conversations,
+            share insights, and connect with amazing voices from all walks of
+            life. Let’s create something unforgettable together!
+          </p>
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="https://www.x.com/bra_lash">
+                  <i class="pi pi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/bra_lash">
+                  <i class="pi pi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="teamCard">
+        <img src="../../../assets/images/kojo.jpeg" alt="Team Member" />
+
+        <div class="info">
+          <h3 class="name">Kojo</h3>
+
+          <p class="description">
+            Hi, I’m Kojo, a UX designer, technologist, and entrepreneur from
+            Agona Swedru with a deep passion for crafting digital experiences
+            that don’t just look good but feel right. I believe great design
+            isn’t just about aesthetics, it’s about creating intuitive,
+            meaningful interactions that solve real-world problems. Beyond
+            pixels and wireframes, I’m always thinking about the bigger
+            picture—how technology can drive businesses forward and create
+            opportunities. Whether it’s building a brand, launching a product,
+            or designing user experiences that truly connect, I love turning
+            ideas into reality. Let’s reimagine the future, one design at a
+            time!
+          </p>
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="pi pi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="pi pi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="teamCard">
+        <img src="../../../assets/images/sam.jpeg" alt="Team Member" />
+
+        <div class="info">
+          <h3 class="name">Sam</h3>
+
+          <p class="description">
+            Hi I'm Sam. A creative software engineer who blends technical skill
+            with artistic flair. When I take time away from the computer, I'd
+            probably be composing music, diving into immersive games, or
+            exploring fascinating new ideas. My passion for learning drives me
+            to push boundaries and bring a unique perspective to every project.
+          </p>
+
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="https://www.x.com/builtbysam" target="_blank">
+                  <i class="pi pi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/spxcesam" target="_blank">
+                  <i class="pi pi-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
+<app-footer />

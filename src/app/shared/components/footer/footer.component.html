@@ -1,1 +1,30 @@
-<p>footer works!</p>
+<footer>
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">
+        @if (themeService.theme() === 'light') {
+        <img
+          class="light-mode-logo"
+          src="../../../../assets/logo-light.svg"
+          alt="Logo"
+        />
+        } @else {
+
+        <img
+          class="dark-mode-logo"
+          src="../../../../assets/logo-dark.svg"
+          alt="Logo"
+        />
+        }
+      </a>
+    </div>
+
+    <ul class="contact">
+      <li><i class="pi pi-phone"></i> +233 (0)24 558 887</li>
+      <li><i class="pi pi-envelope"></i> info&commat;rantsnconfess.com</li>
+      <li><i class="pi pi-map-marker"></i> Takoradi, Ghana</li>
+    </ul>
+
+    <p class="kicker">©{{ date }} Rants & Confess. All Rights Reserved</p>
+  </div>
+</footer>
