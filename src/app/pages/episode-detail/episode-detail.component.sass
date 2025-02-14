@@ -56,3 +56,37 @@
     // max-width: 686px
     line-height: 1.7
     margin: 16px 0 0 0
+
+.recentEpisodes
+    margin: 60px 0 
+
+    .head
+        @include flex($direction: row, $justify: space-between, $gap: null, $align: center)
+        
+        .more
+            @include flex($direction: row, $justify: null, $gap: 8px, $align: center)
+            text-decoration: none
+            color: var(--text-color)
+            transition: 0.2s ease-in
+
+
+            &:hover
+                color: $accent-red
+
+            &:hover > i
+                transform: translateX(8px)
+
+            i
+                transition: 0.2s ease-in
+
+.episodes
+    margin: 24px 0 0 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr
+    grid-column-gap: 16px
+    grid-row-gap: 0px
+
+.sectionTitle
+    font-size: 24px
+    text-transform: uppercase

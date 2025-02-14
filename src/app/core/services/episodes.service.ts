@@ -41,6 +41,14 @@ export class EpisodesService {
     );
   }
 
+  getLastRecentEpisodes(n: number): Observable<Episode[]> {
+    return this.getEpisodes().pipe(
+      map((episodes) => {
+        return episodes.slice(n + 1, n + 4);
+      })
+    );
+  }
+
   getEpisodeById(id: number): Observable<Episode | undefined> {
     return this.getEpisodes().pipe(
       map((episodes: Episode[]) => episodes.find((ep) => ep.id === id))

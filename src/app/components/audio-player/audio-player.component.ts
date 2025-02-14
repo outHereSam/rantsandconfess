@@ -51,6 +51,13 @@ export class AudioPlayerComponent implements AfterViewInit {
     this.currentTime = value;
   }
 
+  getSeekBeforeWidth(): string {
+    const percentage = this.duration
+      ? (this.currentTime / this.duration) * 100
+      : 0;
+    return `${percentage}%`;
+  }
+
   skipBackward(seconds: number): void {
     this.audioPlayer.nativeElement.currentTime = Math.max(
       this.audioPlayer.nativeElement.currentTime - seconds,

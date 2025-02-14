@@ -25,9 +25,11 @@
     <input
       type="range"
       class="progressBar"
+      [defaultValue]="0"
       [value]="currentTime"
       [max]="duration"
       (input)="onProgressChange($event)"
+      [style.--seek-before-width]="getSeekBeforeWidth()"
     />
 
     <!-- duration -->
