@@ -22,4 +22,11 @@ export const routes: Routes = [
         (c) => c.EpisodesComponent
       ),
   },
+  {
+    path: 'episodes/:id',
+    loadComponent: () =>
+      import('./pages/episode-detail/episode-detail.component').then(
+        (c) => c.EpisodeDetailComponent
+      ),
+  },
 ];

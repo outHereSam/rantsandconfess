@@ -18,7 +18,9 @@ export class EpisodesComponent implements OnInit {
 
   ngOnInit(): void {
     this.episodesService.getEpisodes().subscribe({
-      next: (episodes) => (this.episodes = episodes),
+      next: (episodes) => {
+        this.episodes = episodes;
+      },
       error: (error) => console.error('Failed to fetch episodes:', error),
     });
   }

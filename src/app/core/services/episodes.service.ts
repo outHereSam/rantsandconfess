@@ -41,6 +41,12 @@ export class EpisodesService {
     );
   }
 
+  getEpisodeById(id: number): Observable<Episode | undefined> {
+    return this.getEpisodes().pipe(
+      map((episodes: Episode[]) => episodes.find((ep) => ep.id === id))
+    );
+  }
+
   private mapItemToJson(item: Element, id: number): any {
     // 1. Basic fields
     const title = item.querySelector('title')?.textContent?.trim() || '';

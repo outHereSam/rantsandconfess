@@ -6,7 +6,9 @@
     </p>
     <h1 class="episodeTitle">{{ episode.title }}</h1>
     <p class="pubDate">{{ episode.created_at | date : "MMMM d, y" }}</p>
-    <p class="description">{{ episode.description }}</p>
-    <a class="more">More <i class="pi pi-arrow-right"></i></a>
+    <p class="description">{{ episode.description | truncate : 80 }}</p>
+    <a [routerLink]="['/episodes', episode.id]" class="more"
+      >More <i class="pi pi-arrow-right"></i
+    ></a>
   </div>
 </div>

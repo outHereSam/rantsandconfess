@@ -1,0 +1,27 @@
+<app-navbar />
+<div class="hero">
+  <div class="image-container">
+    <div class="overlay"></div>
+    <img [src]="episode?.image_url" alt="Episode Image" />
+  </div>
+  <div class="container">
+    <h1 class="episodeTitle">{{ episode?.title }}</h1>
+    <p class="kicker">
+      <span class="duration">{{ episode?.duration }} Total minutes</span> |
+      <span class="releaseDate">{{
+        episode?.created_at | date : "MMMM d, y"
+      }}</span>
+    </p>
+
+    <app-audio-player [episode]="episode" />
+  </div>
+</div>
+
+<section class="episodeDescription">
+  <div class="container">
+    <h1 class="sectionTitle">Episode Description</h1>
+    <p class="description">{{ episode?.description }}</p>
+  </div>
+</section>
+
+<app-footer />
