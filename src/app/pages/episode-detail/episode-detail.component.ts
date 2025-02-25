@@ -31,11 +31,21 @@ export class EpisodeDetailComponent {
   lastEpisodes: Episode[] = [];
 
   ngOnInit() {
-    const episodeId = this.route.snapshot.paramMap.get('id');
+    this.route.params.subscribe((params) => {
+      const episodeId = params['id'];
+      this.loadEpisode(episodeId);
+      this.loadLastEpisodes(episodeId);
+    });
+  }
+
+  private loadEpisode(episodeId: string) {
     this.episodesService.getEpisodeById(Number(episodeId)).subscribe({
       next: (episode) => (this.episode = episode),
       error: (error) => console.error('Episode not found:', error),
     });
+  }
+
+  private loadLastEpisodes(episodeId: string) {
     this.episodesService.getLastRecentEpisodes(Number(episodeId)).subscribe({
       next: (episodes) => (this.lastEpisodes = episodes),
       error: (error) => console.error('Failed to get last episodes:', error),

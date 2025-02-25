@@ -4,7 +4,7 @@
 @use '../../../styles/_functions' as *
 
 .container
-    max-width: 1300px
+    max-width: 1200px
     margin: 0 auto
 
 header
@@ -65,17 +65,16 @@ header
         border-bottom-left-radius: 24px
 
 .recentEpisodes
-    margin: 60px 0 
+    margin: 60px 0
 
     .head
         @include flex($direction: row, $justify: space-between, $gap: null, $align: center)
-        
+
         .more
             @include flex($direction: row, $justify: null, $gap: 8px, $align: center)
             text-decoration: none
             color: var(--text-color)
             transition: 0.2s ease-in
-
 
             &:hover
                 color: $accent-red
@@ -85,7 +84,6 @@ header
 
             i
                 transition: 0.2s ease-in
-
 
 .episodes, .team
     margin: 24px 0 0 0
@@ -99,7 +97,6 @@ header
     font-size: 24px
     text-transform: uppercase
 
-         
 .meetTeam
     margin: 0 0 60px 0
 
@@ -139,11 +136,3 @@ header
 
                             &:hover
                                 color: $accent-red
-                                
-                    
-
-
-       
-
-
-        

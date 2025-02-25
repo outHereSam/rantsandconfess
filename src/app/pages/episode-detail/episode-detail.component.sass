@@ -3,8 +3,8 @@
 @use '../../../styles/_mixins' as *
 @use '../../../styles/_functions' as *
 
-.container 
-    max-width: 1300px
+.container
+    max-width: 1200px
     margin: 0 auto
 
 .hero
@@ -34,7 +34,6 @@
     .container
         position: absolute
         z-index: 2
-        
 
     .episodeTitle
         font-size: 64px
@@ -58,17 +57,16 @@
     margin: 16px 0 0 0
 
 .recentEpisodes
-    margin: 60px 0 
+    margin: 60px 0
 
     .head
         @include flex($direction: row, $justify: space-between, $gap: null, $align: center)
-        
+
         .more
             @include flex($direction: row, $justify: null, $gap: 8px, $align: center)
             text-decoration: none
             color: var(--text-color)
             transition: 0.2s ease-in
-
 
             &:hover
                 color: $accent-red
