@@ -29,4 +29,11 @@ export const routes: Routes = [
         (c) => c.EpisodeDetailComponent
       ),
   },
+  {
+    path: 'confess',
+    loadComponent: () =>
+      import('./pages/confess/confess.component').then(
+        (c) => c.ConfessComponent
+      ),
+  },
 ];

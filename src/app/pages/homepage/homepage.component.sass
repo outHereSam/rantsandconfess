@@ -6,6 +6,7 @@
 .container
     max-width: 1200px
     margin: 0 auto
+    padding: 0 24px
 
 header
     // @include flex($direction: row, $justify: null, $align: center)
@@ -14,10 +15,14 @@ header
     gap: 17px
     margin: 32px 0 0 0
 
+    // Tablet breakpoint
+    @media (max-width: 768px)
+        grid-template-columns: 1fr
+        gap: 10px
+
     .hero
         background-color: var(--background-secondary)
         transition: 0.2s ease-in
-        flex: 1
         padding: 64px
 
         h1
@@ -92,6 +97,11 @@ header
     grid-template-rows: 1fr
     grid-column-gap: 16px
     grid-row-gap: 0px
+
+    // Mobile breakpoint
+    @media (max-width: 768px)
+        grid-template-columns: 1fr
+        grid-row-gap: 24px
 
 .sectionTitle
     font-size: 24px

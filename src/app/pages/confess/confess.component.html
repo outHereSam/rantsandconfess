@@ -1,0 +1,27 @@
+<app-navbar />
+
+<div class="container">
+  <h1 class="sectionTitle">Confess</h1>
+
+  <form [formGroup]="confessForm" (ngSubmit)="onSubmit()">
+    <label for="">Your message</label>
+    <textarea
+      formControlName="message"
+      rows="10"
+      placeholder="Enter your anonymous message here"
+      required
+    ></textarea>
+    @if (confessForm.get('message')?.invalid &&
+    (confessForm.get('message')?.dirty || confessForm.get('message')?.touched))
+    {
+    <small class="error">Message is required</small>
+    }
+    <button [disabled]="isLoading" type="submit">
+      @if (isLoading) {
+      <app-loader />
+      } @else { Submit }
+    </button>
+  </form>
+</div>
+
+<app-footer />
