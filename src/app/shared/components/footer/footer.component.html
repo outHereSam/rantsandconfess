@@ -3,18 +3,10 @@
     <div class="logo">
       <a routerLink="/">
         @if (themeService.theme() === 'light') {
-        <img
-          class="light-mode-logo"
-          src="../../../../assets/logo-light.svg"
-          alt="Logo"
-        />
+        <img class="light-mode-logo" src="assets/logo-light.svg" alt="Logo" />
         } @else {
 
-        <img
-          class="dark-mode-logo"
-          src="../../../../assets/logo-dark.svg"
-          alt="Logo"
-        />
+        <img class="dark-mode-logo" src="assets/logo-dark.svg" alt="Logo" />
         }
       </a>
     </div>

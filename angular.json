@@ -23,7 +23,15 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/primeicons",
+                "output": "assets/primeicons/"
+              }
+            ],
             "styles": ["src/styles.sass"],
             "scripts": []
           },
@@ -81,8 +89,13 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.sass"],
+            "assets": ["src/favicon.ico", "srcassets"],
+            "styles": [
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "src/styles.sass"
+            ],
             "scripts": []
           }
         }

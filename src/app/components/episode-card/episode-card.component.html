@@ -1,4 +1,4 @@
-<div class="episodeCard">
+<a [routerLink]="['/episodes', episode.id]" class="episodeCard">
   <img [src]="episode.image_url" alt="Episode Image" />
   <div class="info">
     <p class="episodeNumber">
@@ -11,4 +11,4 @@
       >More <i class="pi pi-arrow-right"></i
     ></a>
   </div>
-</div>
+</a>

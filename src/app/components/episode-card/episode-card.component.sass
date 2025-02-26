@@ -3,7 +3,8 @@
 @use '../../../styles/_mixins' as *
 
 .episodeCard
-
+    text-decoration: none
+    color: var(--text-color)
 
     img
         width: 100%
@@ -29,7 +30,7 @@
             font-family: monospace
             font-style: italic
             margin-bottom: 12px
-            
+
         .description
             font-size: 16px
             line-height: 28px
@@ -43,10 +44,6 @@
 
             &:hover > i
                 transform: translateX(8px)
-            
+
             i
                 transition: 0.2s ease-in
-
-          
-            
-
